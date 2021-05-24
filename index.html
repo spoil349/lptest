@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Заказать забор</title>
+</head>
+<body>
+    <div class="content" id="content">
+        <div class="wrapper">
+            <div class="header">
+                <h1>Заказать забор</h1>
+            </div>
+            <div class="form_wrapper">
+                <form action="#" class="order_form" id="first_form">
+                    <div class="input_wrapper_1">
+                        <label for="input_length_1">Длина забора</label>
+                        <div class="input_primary_content">
+                            <div class="input_middle_content">
+                                <input type="text" class="input_length" id="input_length_1" name="length" placeholder="0">
+                                <div class="units" id="length_units">метров</div>
+                            </div>
+                            <div class="check_image" id="length_check">
+                                <img src="img/check.jpg">
+                            </div>
+                        </div>
+                        <span class="form_warning" id="length_warning"></span>
+                    </div>
+                    <div class="input_wrapper_2">
+                        <label for="input_height_1">Высота забора</label>
+                        <div class="input_primary_content">
+                            <div class="input_middle_content">
+                                <input type="text" class="input_height" id="input_height_1" name="height" placeholder="0">
+                                <div class="units" id="height_units">метров</div>
+                            </div>
+                            <div class="check_image" id="height_check">
+                                <img src="img/check.jpg">
+                            </div>
+                        </div>
+                        <span class="form_warning" id="height_warning"></span>
+                    </div>
+                    <div class="select_title">
+                        <h2>Материал забора</h2>
+                    </div>
+                    <div class="select">
+                        <div class="select_header">
+                            <span class="select_current" data-price="1" id="material">Выберите материал</span>
+                            <div class="select_icon">
+                                <img src="img/select_icon.png">
+                            </div>
+                            <div class="check_image_select display_none" id="select_check">
+                                <img src="img/check.jpg">
+                            </div>
+                        </div>
+                        <div class="select_body">
+                            <div class="select_item si1" data-price="400" id="select_1">Профнастил 400Р за м <sup>2</sup></div>
+                            <div class="select_item si2" data-price="500" id="select_2">Модули 500 Р за м <sup>2</sup></div>
+                            <div class="select_item si3" data-price="700" id="select_3">Бетон 700 Р за м <sup>2</sup></div>
+                            <div class="select_item si4" data-price="200" id="select_4">Сетка 200 Р за м <sup>2</sup></div>
+                        </div>
+                        <span class="form_warning" id="select_warning"></span>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" class="custom_checkbox" id="installation" name="installation" value="yes">
+                        <label for="installation">Нужен монтаж</i>
+                    </div>
+                    <div class="order_summ">
+                        <span>Сумма заказа: </span>
+                        <span id="summ">0 </span>
+                        <span id="summ_2">&#8381;</span>
+                    </div>
+                    <div class="button_wrapper">
+                        <button class="button" name="BUTTON" id="button" type="submit" value="forward"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="content_2" id="content_2">
+        <div class="wrapper_2">
+            <a href="#content" class="second_screen_back" id="second_screen_back">&#8592; Вернуться</a>
+            <div class="header" id="header">
+                <h1>Пожалуйста, представьтесь</h1>
+            </div>
+            <div class="form_wrapper">
+                <form action="http://u89235.test-handyhost.ru/mail.php" id="second_form" class="user_form" method="POST">
+                    <div class="name_wrapper">
+                        <label for="input_name" id="name_label">Ваше имя</label>
+                        <div class="input_primary_content">
+                            <div class="input_middle_content">
+                                <input type="text" class="input_name" id="name" name="name">
+                            </div>
+                            <div class="check_image_customer display_none" id="name_check">
+                                <img src="img/check.jpg">
+                            </div>
+                        </div>
+                        <span class="form_warning" id="name_warning"></span>
+                    </div>
+                    <div class="email_wrapper">
+                        <label for="input_email">Электронная почта</label>
+                        <div class="input_primary_content">
+                            <div class="input_middle_content">
+                                <input type="text" class="input_email" id="email" name="email">
+                            </div>
+                            <div class="check_image_customer display_none" id="email_check">
+                                <img src="img/check.jpg">
+                            </div>
+                        </div>
+                        <span class="form_warning" id="email_warning"></span>
+                    </div>
+                    <div class="tel_wrapper">
+                        <label for="input_tel">Телефон</label>
+                        <div class="input_primary_content">
+                            <div class="input_middle_content">
+                                <input type="text" class="input_tel" id="tel" name="phone">
+                            </div>
+                            <div class="check_image_customer display_none" id="phone_check">
+                                <img src="img/check.jpg">
+                            </div>
+                        </div>
+                        <span class="form_warning" id="phone_warning"></span>
+                    </div>
+                    <div class="order_info_wrapper">
+                        <div class="order_info_hidden" id="order_info">
+                            <span class="order_summary">
+                                <span>Вы укомплектовали забор </span><span id="order_summary_length"></span>
+                                <span> и </span><span id="order_summary_height"></span><span> из материала </span>
+                                <span id="order_summary_material"></span><span> на сумму </span>
+                                <span id="order_summary_summ"></span><span id="rubble"> &#8381;</span>
+                            </span>
+                        </div>                        
+                    </div>
+                    <div class="button_send_wrapper">
+                        <button class="button_send" type="submit" name="BUTTON2" id="button2" value="forward" onclick=""></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="content_3 content_hidden" id="content_3">
+        <div class="wrapper_3">
+            <a href="#" class="popup_close" id="third_screen_back">Закрыть</a>
+            <div class="content_3_header">
+                <span id="third_screen_name"></span><span><br>заказ </span><span id="order_number"></span><span> сформирован!</span>
+            </div>
+            <div class="content_3_text_1">
+                <span>Мы повторили его комплектацию на почту </span><span id="third_screen_email"></span>
+            </div>
+            <div class="content_3_text_2">
+                <span>В ближайшее время наш специалист свяжется с вами по телефону<br></span>
+                <span id="third_screen_phone"></span>
+            </div>
+        </div>
+    </div>
+    <div class="content_4 content_hidden" id="content_4">
+        <div class="wrapper_3">
+            <a href="#" class="popup_close" id="fourth_screen_back">Закрыть</a>
+            <div class="content_3_header">
+                <span id="third_screen_name">Ой!</span>
+            </div>
+            <div class="content_3_text_1">
+                <span>Что-то пошло не так. Пожалуйста, перезагрузите страницу и попробуйте снова. Или свяжитесь с нами по телефону:</span>
+            </div>
+            <div class="content_3_text_2">
+                <span>8(927) 750-05-82, Николай.<br></span>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
